@@ -18,11 +18,8 @@ input[type="number"] {
 }
 
 .board-screen {
-  position: absolute;
-  top: 50%;
-  left: 50%;
   perspective: 1000px;
-  transform: translate(-50%, -50%) scale(0.64);
+  scale: 0.8;
   transition: all 300ms ease-in-out;
   text-align: center;
 
@@ -52,12 +49,7 @@ input[type="number"] {
     margin: auto;
     margin-bottom: 0;
     font-size: 1.2rem;
-    // color: hsl(212, 10%, 26%);
-    color: black;
-    font-weight: 500;
-    font-family: Glory;
-    // background-clip: initial;
-    // text-fill-color:
+    color: hsl(212, 10%, 26%);
   }
   a {
     font-weight: 500;
@@ -67,8 +59,9 @@ input[type="number"] {
   a:hover {
     opacity: 0.5;
   }
-  .sectionButtons {
-    color: #404040;
+
+  .sectionButtons:hover {
+    opacity: 0.5;
     cursor: pointer;
   }
 
@@ -98,23 +91,39 @@ input[type="number"] {
   margin: 0;
 
   p {
-    all: initial;
     margin: auto;
     margin-bottom: 0;
     font-size: 1.2rem;
-    color: hsl(212, 10%, 26%);
+    // color: hsl(212, 10%, 26%);
   }
   .element {
     width: 10rem;
     height: 30rem;
     margin: 1rem;
-    border: none;
+    // border: none;
 
-    background: -webkit-linear-gradient(
-      25deg,
-      hsl(27, 53%, 55%) 0%,
-      hsl(29, 81%, 79%) 100%
-    );
+    display: flex;
+    flex-direction: column;
+
+    // background: -webkit-linear-gradient(
+    //   25deg,
+    //   hsl(27, 53%, 55%) 0%,
+    //   hsl(29, 81%, 79%) 100%
+    // );
+
+    &:hover {
+      box-shadow: 0px 0px 2rem hsl(0, 0%, 10%);
+    }
+
+    .userNFT {
+      display: grid;
+      grid-gap: 0.7rem;
+      // grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+      grid-template-columns: auto auto;
+      img {
+        max-width: 100%;
+      }
+    }
   }
 }
 // .board {
@@ -150,6 +159,7 @@ button {
 .dice {
   width: 3rem;
   height: 3rem;
+  border: 2px solid transparent;
 }
 
 .dot {
@@ -222,6 +232,7 @@ button {
   border-radius: 0.5rem;
   box-shadow: 0px 0px 2rem hsl(0, 0%, 10%);
   transition: all 400ms ease-in-out;
+
   &:hover {
     // opacity: 0.5;
     box-shadow: 0 0 30px hsl(29, 81%, 79%) inset;
@@ -304,7 +315,7 @@ button {
         padding: 0;
       }
       .dice {
-        transform: scale(0.4);
+        scale: 0.4;
         margin: -0.65rem;
       }
     }
@@ -317,7 +328,7 @@ button {
         padding: 0;
         margin: auto;
         .dice {
-          transform: scale(0.6);
+          scale: 0.6;
           margin: 0;
           // width: 2rem;
           // height: 2rem;
@@ -334,38 +345,129 @@ button {
   }
 }
 
-.sapphire {
+.platinum {
+  box-shadow: 0 0 20px hsl(0, 0%, 96%) inset;
+
   .dice {
+    border: 2px solid hsl(27, 53%, 55%);
+    background: linear-gradient(
+      25deg,
+      hsl(0, 0%, 79%) 0%,
+      hsl(0, 0%, 96%) 100%
+    );
+  }
+  // p {
+  //   background: initial;
+  //   -webkit-background-clip: initial;
+  //   -webkit-text-fill-color: initial;
+
+  //   color: hsl(0, 0%, 96%) !important;
+  // }
+}
+
+.sapphire {
+  box-shadow: 0 0 20px hsl(218, 80%, 54%) inset;
+
+  .dice {
+    border: 2px solid hsl(27, 53%, 55%);
     background: linear-gradient(
       25deg,
       hsl(228, 80%, 42%) 0%,
       hsl(218, 80%, 54%) 100%
     );
   }
-  .element {
-    // background: linear-gradient(
-    //   25deg,
-    //   hsl(228, 80%, 42%) 0%,
-    //   hsl(218, 80%, 54%) 100%
-    // );
-    border-color: hsl(218, 80%, 54%);
-  }
 }
 
 .ruby {
+  box-shadow: 0 0 20px hsl(2, 80%, 54%) inset;
+
   .dice {
+    border: 2px solid hsl(27, 53%, 55%);
     background: linear-gradient(
       25deg,
       hsl(355, 80%, 42%) 0%,
       hsl(2, 80%, 54%) 100%
     );
   }
-  .element {
-    // background: linear-gradient(
-    //   25deg,
-    //   hsl(355, 80%, 42%) 0%,
-    //   hsl(2, 80%, 54%) 100%
-    // );
-    border-color: hsl(2, 80%, 54%);
+}
+
+.emerald {
+  box-shadow: 0 0 20px hsl(95, 68%, 46%) inset;
+
+  .dice {
+    border: 2px solid hsl(27, 53%, 55%);
+    background: linear-gradient(
+      25deg,
+      hsl(115, 81%, 22%) 0%,
+      hsl(95, 68%, 46%) 100%
+    );
+  }
+}
+
+.amethyst {
+  box-shadow: 0 0 20px hsl(294, 100%, 50%) inset;
+
+  .dice {
+    border: 2px solid hsl(27, 53%, 55%);
+    background: linear-gradient(
+      25deg,
+      hsl(276, 85%, 42%) 0%,
+      hsl(294, 100%, 50%) 100%
+    );
+  }
+}
+
+.obsidian {
+  box-shadow: 0 0 20px hsl(0, 0%, 52%) inset;
+
+  .dice {
+    border: 2px solid hsl(27, 53%, 55%);
+    background: linear-gradient(
+      25deg,
+      hsl(0, 0%, 19%) 0%,
+      hsl(0, 0%, 52%) 100%
+    );
+  }
+
+  .dot {
+    background: linear-gradient(
+      200deg,
+      hsl(0, 0%, 53%) 0%,
+      hsl(0, 0%, 70%) 100%
+    );
+  }
+}
+
+.citrine {
+  box-shadow: 0 0 20px hsl(75, 80%, 54%) inset;
+
+  .dice {
+    border: 2px solid hsl(27, 53%, 55%);
+    background: linear-gradient(
+      25deg,
+      hsl(25, 100%, 54%) 0%,
+      hsl(75, 80%, 54%) 100%
+    );
+  }
+
+  .dot {
+    background: linear-gradient(
+      200deg,
+      hsl(0, 0%, 5%) 0%,
+      hsl(0, 0%, 40%) 100%
+    );
+  }
+}
+
+.diamond {
+  box-shadow: 0 0 20px hsl(164, 100%, 54%) inset;
+
+  .dice {
+    border: 2px solid hsl(27, 53%, 55%);
+    background: linear-gradient(
+      25deg,
+      hsl(164, 100%, 54%) 0%,
+      hsl(218, 80%, 54%) 100%
+    );
   }
 }

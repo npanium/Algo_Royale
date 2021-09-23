@@ -12,6 +12,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+footer {
+  text-align: center;
+  padding: 5rem;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

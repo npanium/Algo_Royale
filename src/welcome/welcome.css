@@ -33,7 +33,7 @@
 
   min-height: 100vh;
   padding: 20px;
-
+  padding-top: 10rem;
   color: hsla(0, 0%, 0%, 0.6);
   background: var(--background-color);
   text-align: center;

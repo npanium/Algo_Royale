@@ -30,41 +30,41 @@ export default function Welcome() {
   }, []);
 
   return (
-    <body className="welcome" id="welcome">
+    <div className="welcome" id="welcome">
       <section>
         <h1>Algo Royale</h1>
       </section>
-      <section class="main">
-        <div class="wrap wrap--1" ref={ref_wrap1}>
-          <div class="container container--1 container-inactive">
-            <div class="container-inner">
+      <section className="main">
+        <div className="wrap wrap--1" ref={ref_wrap1}>
+          <div className="container container--1 container-inactive">
+            <div className="container-inner">
               <p>Roulette</p>
             </div>
           </div>
         </div>
 
         <div
-          class="wrap wrap--2"
+          className="wrap wrap--2"
           style={{ scale: "1.2" }}
           ref={ref_wrap2}
           onClick={() => history.push("./sicbo")}
         >
-          <div class="container container--2">
-            <div class="container-inner">
+          <div className="container container--2">
+            <div className="container-inner">
               <object type="image/svg+xml" data={dragon}></object>
             </div>
             <p style={{ paddingRight: "1rem" }}>Sic Bo</p>
           </div>
         </div>
 
-        <div class="wrap wrap--3" ref={ref_wrap3}>
-          <div class="container container--3 container-inactive">
-            <div class="container-inner">
+        <div className="wrap wrap--3" ref={ref_wrap3}>
+          <div className="container container--3 container-inactive">
+            <div className="container-inner">
               <p>Blackjack</p>
             </div>
           </div>
         </div>
       </section>
-    </body>
+    </div>
   );
 }
